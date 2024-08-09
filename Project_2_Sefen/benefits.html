@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8"/>
+    <title>Membership Benefits | Bethesda Blood Drive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Discover the benefits of joining our Executive Board at the Bethesda Blood Drive."/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- For icons -->
+
+    <style>
+        /* Global Reset and Box Sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        #wrap {
+            background-color: #fff;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #FF6B6B, #FF8C42);
+            color: white;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInDown 1s ease-in-out;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            padding-left: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            background-color: #FF6B6B;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            z-index: 1001;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #FF8C42;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 60%);
+            transform: rotate(-45deg);
+            z-index: 1;
+            animation: spin 20s linear infinite;
+        }
+
+        section {
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #FF6B6B;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        section h3 {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            color: #FF6B6B;
+            position: relative;
+            z-index: 2;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        section .benefit {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        section .benefit:hover {
+            transform: translateX(10px);
+        }
+
+        section .benefit i {
+            font-size: 2rem;
+            color: #FF6B6B;
+            margin-right: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #FF6B6B, #FF8C42);
+            color: white;
+            border-radius: 0 0 15px 15px;
+            font-size: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            color: white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 30px 0;
+            font-size: 1.5rem;
+            color: white;
+            background-color: #FF6B6B;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #FF8C42;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(-45deg);
+            }
+            100% {
+                transform: rotate(315deg);
+            }
+        }
+    </style>
+</head>
+<body id="top">
+<div id="wrap">
+    <header class="clearfix">
+        <nav role="navigation" aria-label="main menu">
+            <ul>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+
+        <h1>Executive Board Membership Benefits</h1>
+    </header>
+
+    <section id="benefits">
+        <h2>Why Join Our Team?</h2>
+        <div class="benefit">
+            <i class="fas fa-clock"></i>
+            <div>
+                <h3>Earn Student Service Hours</h3>
+                <p>Accumulate valuable service hours that are essential for graduation requirements or enhancing your college applications.</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <i class="fas fa-leadership"></i>
+            <div>
+                <h3>Develop Leadership Skills</h3>
+                <p>Lead a team, coordinate initiatives, and take on significant responsibility, all of which will refine your leadership capabilities and prepare you for future roles.</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <i class="fas fa-chart-line"></i>
+            <div>
+                <h3>Gain Strategic Planning Experience</h3>
+                <p>Engage in the development and execution of recruitment strategies, gaining hands-on experience in project management and strategic thinking.</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <i class="fas fa-users"></i>
+            <div>
+                <h3>Enhance Teamwork and Collaboration</h3>
+                <p>Work closely with a team of peers, fostering collaboration, delegation, and support to achieve common goals.</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <i class="fas fa-hand-holding-heart"></i>
+            <div>
+                <h3>Make a Real Impact</h3>
+                <p>Contribute to a life-saving cause by ensuring the success of a blood drive, directly affecting the lives of those in need.</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <i class="fas fa-trophy"></i>
+            <div>
+                <h3>Build a Strong Resume and College Application</h3>
+                <p>Add a significant leadership role to your resume, making you stand out to colleges and future employers. Enhance your college and scholarship applications with meaningful leadership and service experiences that demonstrate your commitment and initiative.</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <i class="fas fa-thumbs-up"></i>
+            <div>
+                <h3>Receive Letters of Recommendation</h3>
+                <p>Earn strong letters of recommendation from leaders, highlighting your dedication, leadership, and contributions to the community.</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <i class="fas fa-smile"></i>
+            <div>
+                <h3>Personal Growth and Satisfaction</h3>
+                <p>Experience personal fulfillment by knowing you’ve made a difference in your community and developed skills that will benefit you throughout your life.</p>
+            </div>
+        </div>
+
+  <a href="https://forms.gle/unFRLZVVGFXywHDz7" class="cta-button" target="_blank">Join the Team</a>
+    </section>
+
+    <footer>
+        <p><i>Being a member of the Executive Board requires dedication, leadership, and a strong commitment to our mission. It’s a unique opportunity to make a meaningful impact while developing skills that will serve you for a lifetime.</i></p>
+    </footer>
+</div><!-- closes wrap -->
+</body>
+</html>
