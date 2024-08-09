@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8"/>
+    <title>BETHESDA BLOOD DRIVE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="This is Anne's Website for TECH 272 Spring 2024"/>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Global Reset and Box Sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-image: url('Project_2_Sefen/images/header.png'); /* Replace with your hero image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax Effect */
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+            z-index: 1;
+        }
+
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-bottom: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+        }
+
+        .header-text-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Dark background for the text container */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        /* Main Section */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 2.2rem;
+            color: #FF6B6B;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        main p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        /* Links Section */
+        .links-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .link-box {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1;
+            min-width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .link-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .link-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #FF6B6B;
+        }
+
+        .link-box h3 i {
+            margin-right: 10px;
+        }
+
+        .link-box p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #777;
+        }
+
+        .link-box a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF6B6B;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .link-box a:hover {
+            background-color: #ff8787;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-text-container">
+            <h1>Bethesda Blood Drive</h1>
+            <p>Making a Difference, One Donation at a Time</p>
+        </div>
+    </header>
+
+    <main>
+        <h2>Welcome to the Bethesda Blood Drive</h2>
+        <p>Join us in our mission to save lives through blood donation. Whether you're a regular donor or a first-timer, we welcome your participation in this life-saving cause. Explore the links below to sign up, learn more, and get involved.</p>
+        
+        <section class="links-section">
+            <div class="link-box">
+                <h3><i class="fas fa-clipboard-list"></i> Sign Up to Donate</h3>
+                <p>Ready to make a difference? Sign up with the Red Cross to schedule your blood donation appointment.</p>
+                <a href="https://www.redcrossblood.org/give.html/drive-results?zipSponsor=BCCRS" target="_blank">Sign Up</a>
+            </div>
+
+            <div class="link-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> Alternative Sign Up</h3>
+                <p>Having trouble with the Red Cross link? No worries! You can sign up through our alternative form.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0woio4WIMKK9hI0ygNyxBW-XRgrIXT39Ap3EXuWd3OMA8WQ/viewform" target="_blank">Sign Up Here</a>
+            </div>
+
+            <div class="link-box">
+                <h3><i class="fas fa-user-plus"></i> Officer Application</h3>
+                <p>Interested in taking a leadership role? Apply to become an officer for the Bethesda Blood Drive.</p>
+                <a href="https://forms.gle/BevAVboPGkqNPnzH6" target="_blank">Apply Now</a>
+            </div>
+
+            <div class="link-box">
+                <h3><i class="fas fa-medal"></i>Officer Benefits</h3>
+                <p>Learn more about the benefits of being an officer and how you can make an impact.</p>
+                <a href="Project_2_Sefen/benefits.html">Learn More</a>
+            </div>
+
+            <div class="link-box">
+                <h3><i class="fas fa-info-circle"></i> About Us</h3>
+                <p>Curious about who we are and what we do? Read more about the Bethesda Blood Drive.</p>
+                <a href="Project_2_Sefen/aboutus.html">About Us</a>
+            </div>
+
+            <div class="link-box">
+                <h3><i class="fas fa-users"></i> Meet the Officers</h3>
+                <p>Get to know the dedicated team behind the Bethesda Blood Drive.</p><br>
+                <a href="Project_2_Sefen/officers.html">Meet the Team</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bethesda Blood Drive | Website programmed by Anne Victoria Sefen</p>
+    </footer>
+
+</body>
+</html>
