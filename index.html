@@ -25,14 +25,16 @@
             line-height: 1.6;
             background-color: #f7f7f7;
             color: #333;
+            padding: 0;
+            margin: 0;
         }
 
         /* Header Styling */
         header {
-            background-image: url('Project_2_Sefen/images/header.png'); /* Replace with your hero image URL */
+            background-image: url('Project_2_Sefen/images/header.png');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Parallax Effect */
+            background-attachment: fixed;
             color: white;
             padding: 60px 20px;
             text-align: center;
@@ -47,7 +49,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+            background: rgba(0, 0, 0, 0.4);
             z-index: 1;
         }
 
@@ -60,20 +62,21 @@
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         header p {
             font-size: 1.3rem;
             margin-bottom: 0;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
         }
 
         .header-text-container {
-            background-color: rgba(0, 0, 0, 0.6); /* Dark background for the text container */
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 10px;
             display: inline-block;
+            max-width: 90%;
         }
 
         /* Main Section */
@@ -110,7 +113,7 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            flex: 1;
+            flex: 1 1 calc(33% - 40px);
             min-width: 280px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: left;
@@ -153,6 +156,115 @@
             transform: scale(1.05);
         }
 
+        /* Image Slider Section */
+        .slider-section {
+            margin: 60px 0;
+            padding: 0 20px;
+        }
+
+        .slider-section h2 {
+            font-size: 2rem;
+            color: #FF6B6B;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slides.active {
+            display: block;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .slider-buttons .prev, .slider-buttons .next {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* About Section */
+        .about-section {
+            margin: 60px 0;
+            padding: 0 20px;
+            text-align: left;
+        }
+
+        .about-section h2 {
+            font-size: 2.2rem;
+            color: #FF6B6B;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background-color: #FF6B6B;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .cta-banner h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-banner a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: white;
+            color: #FF6B6B;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .cta-banner a:hover {
+            background-color: #ff8787;
+            color: white;
+            transform: scale(1.05);
+        }
+
         /* Footer */
         footer {
             background-color: #333;
@@ -166,6 +278,58 @@
         footer p {
             margin: 0;
         }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            main h2 {
+                font-size: 2rem;
+            }
+
+            .link-box {
+                flex: 1 1 calc(50% - 40px);
+                min-width: calc(50% - 40px);
+            }
+
+            .about-section p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .link-box {
+                flex: 1 1 100%;
+                min-width: 100%;
+            }
+
+            .about-section p {
+                font-size: 0.9rem;
+            }
+
+            .cta-banner h3 {
+                font-size: 1.5rem;
+            }
+
+            .cta-banner a {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -174,7 +338,7 @@
         <div class="header-text-container">
             <h1>Bethesda Blood Drive</h1>
             <p>Making a Difference, One Donation at a Time</p>
-			<p>Upcoming Blood Drive: August 20, 5020 Battery Ln, 12:30-5:30</p>
+            <p>Upcoming Blood Drive: August 20, 5020 Battery Ln, 12:30-5:30</p>
         </div>
     </header>
 
@@ -202,7 +366,7 @@
             </div>
 
             <div class="link-box">
-                <h3><i class="fas fa-medal"></i>Officer Benefits</h3>
+                <h3><i class="fas fa-medal"></i> Officer Benefits</h3>
                 <p>Learn more about the benefits of being an officer and how you can make an impact.</p>
                 <a href="Project_2_Sefen/benefits.html">Learn More</a>
             </div>
@@ -219,11 +383,104 @@
                 <a href="Project_2_Sefen/officers.html">Meet the Team</a>
             </div>
         </section>
+
+        <!-- Image Slider Section -->
+        <section class="slider-section">
+            <h2>Past Blood Drives</h2>
+            <div class="slider-container">
+                <div class="slides active">
+                    <img src="Project_2_Sefen/images/1.png" alt="Blood Drive Image 1">
+                </div>
+                <div class="slides">
+                    <img src="Project_2_Sefen/images/2.png" alt="Blood Drive Image 2">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/3.png" alt="Blood Drive Image 3">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/4.png" alt="Blood Drive Image 4">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/5.png" alt="Blood Drive Image 5">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/6.png" alt="Blood Drive Image 6">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/7.png" alt="Blood Drive Image 7">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/8.png" alt="Blood Drive Image 8">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/9.png" alt="Blood Drive Image 9">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/10.png" alt="Blood Drive Image 10">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/11.png" alt="Blood Drive Image 11">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/12.png" alt="Blood Drive Image 12">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/13.png" alt="Blood Drive Image 13">
+                </div>
+				<div class="slides">
+                    <img src="Project_2_Sefen/images/14.png" alt="Blood Drive Image 14">
+                </div>
+                <!-- Add more images as needed -->
+
+                <div class="slider-buttons">
+                    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+                    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <h2>About the Bethesda Blood Drive</h2>
+            <p>On June 18, 2024, we held our very first blood drive at the Bethesda Fire Department. It was an incredible success, with over 50 pints of blood collected, potentially saving up to 150 lives. The event brought together members of the community, first responders, and volunteers all united by a common goal – to make a difference.</p>
+            <p>The journey wasn't without its challenges. From securing the venue to ensuring we had enough volunteers, every step required dedication and teamwork. But seeing the impact we made, the lives we touched, and the sense of community that blossomed made every effort worthwhile.</p>
+            <p>Since that day, we've continued to grow, learning from each experience and striving to improve with every blood drive. We invite you to be a part of this life-saving mission, whether as a donor, a volunteer, or a supporter.</p>
+        </section>
+
+        <!-- Call to Action Banner -->
+        <div class="cta-banner">
+            <h3>Ready to Make a Difference?</h3>
+            <a href="https://forms.gle/unFRLZVVGFXywHDz7" target="_blank">Join Our Team</a>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Bethesda Blood Drive | Website programmed by Anne Victoria Sefen</p>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slides");
+            if (n >= slides.length) {slideIndex = 0}    
+            if (n < 0) {slideIndex = slides.length - 1}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex].style.display = "block";  
+        }
+
+        // Auto slide every 5 seconds
+        setInterval(function() {
+            changeSlide(1);
+        }, 5000);
+    </script>
 
 </body>
 </html>
