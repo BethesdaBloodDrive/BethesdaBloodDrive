@@ -1,4 +1,4 @@
-## Hi there 👋
+Official Website for the Bethesda Blood Drive, an organization founded by Anne Sefen (A volunteer EMT at Wheaton Volunteer Rescue Squad and Bethesda Blood Drive) that partners with local fire departments and the red cross to host blood drives every three months and combat the national blood shortage. ## Hi there 👋
 
 <!--
 **BethesdaBloodDrive/BethesdaBloodDrive** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
