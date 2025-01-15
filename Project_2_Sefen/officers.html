@@ -157,29 +157,82 @@
             100% { opacity: 0; }
         }
 
-        .officer-profile h2 {
+                .officer-profile h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
             margin-bottom: 15px;
             color: #FF6B6B;
-            position: relative;
-        }
-
-        .officer-profile h2::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 50px;
-            height: 4px;
-            background-color: #FF8C42;
         }
 
         .officer-profile p {
             font-size: 1.1rem;
             color: #555;
-            line-height: 1.8;
         }
+
+        .recruitment-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .recruitment-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #FF6B6B;
+            margin-bottom: 30px;
+        }
+
+        .recruitment-slider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recruitment-team {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-member {
+            text-align: center;
+            flex: 0 0 120px;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member p {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            cursor: pointer;
+            user-select: none;
+            color: #FF6B6B;
+            z-index: 2;
+        }
+
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+
+
 
         footer {
             text-align: center;
@@ -398,10 +451,70 @@
             </div>
         </div>
     </section>
+<section>
+    <div class="officer-profile clearfix">
+        <div class="slideshow-container">
+            <img src="images/cathy.jpeg" alt="Image of Cathy Xiao">
+			<img src="images/cathy.jpeg" alt="Image of Cathy Xiao">
+			<img src="images/cathy.jpeg" alt="Image of Cathy Xiao">
+        </div>
+        <div>
+            <h2>Cathy Xiao - Recruitment Coordinator</h2>
+            <p>Cathy Xiao brings her expertise in community engagement and volunteer recruitment to the Bethesda Blood Drive. Her strategic planning and passion for connecting with people have been key to building a robust and enthusiastic team of volunteers.</p>
+        </div>
+    </div>
+</section>
+ <section class="recruitment-section">
+        <h2>Recruitment Team</h2>
+        <div class="recruitment-slider">
+            <div class="arrow left" onclick="scrollLeft()">&#8592;</div>
+            <div class="recruitment-team">
+                <div class="team-member">
+                    <img src="../Screenshot 2025-01-15 163149.png" alt="Ila Benitah">
+                    <p>Ila Benitah</p>
+                </div>
+                <div class="team-member">
+                    <img src="../Screenshot 2025-01-15 163149.png" alt="Renim Risku">
+                    <p>Renim Risku</p>
+                </div>
+                <div class="team-member">
+                    <img src="../Screenshot 2025-01-15 163149.png" alt="Maya Fesenko">
+                    <p>Maya Fesenko</p>
+                </div>
+            </div>
+            <div class="arrow right" onclick="scrollRight()">&#8594;</div>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 Bethesda Blood Drive | Website programmed by Anne Sefen &amp; Charlotte Grohowski</p>
     </footer>
+
+<script>
+    const team = document.querySelector('.recruitment-team');
+    const members = document.querySelectorAll('.team-member');
+    const memberWidth = 140; // Width of each team member including gap
+    const totalWidth = members.length * memberWidth; // Total width of all members
+    let scrollOffset = 0;
+
+    function scrollLeft() {
+        scrollOffset -= memberWidth; 
+        if (scrollOffset < 0) {
+            scrollOffset = totalWidth - memberWidth; // Wrap to the last member
+        }
+        team.style.transform = `translateX(-${scrollOffset}px)`;
+    }
+
+    function scrollRight() {
+        scrollOffset += memberWidth;
+        if (scrollOffset >= totalWidth) {
+            scrollOffset = 0; // Wrap back to the first member
+        }
+        team.style.transform = `translateX(-${scrollOffset}px)`;
+    }
+</script>
+
+
 </div><!-- closes wrap -->
 </body>
 </html>
